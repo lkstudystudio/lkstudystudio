@@ -1,3 +1,4 @@
+import Process from "@/components/Process";
 import WhyUs from "@/components/WhyUs";
 import Projects from "@/components/Projects";
 import Services from "@/components/Services";
@@ -69,6 +70,7 @@ export default function Home() {
       <Services />
       <Projects />
       <WhyUs />
+      <Process />
 
     </main>
   );

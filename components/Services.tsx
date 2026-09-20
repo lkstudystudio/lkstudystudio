@@ -2,32 +2,32 @@ const services = [
   {
     title: "Web Development",
     text: "Fast, responsive and modern websites built for real-world businesses.",
-    image: "/images/web-development.jpg",
+    image: "/images/web-development.png",
   },
   {
     title: "App Development",
     text: "Powerful digital applications designed around your ideas.",
-    image: "/images/app-development.jpg",
+    image: "/images/app-development.png",
   },
   {
     title: "UI / UX Design",
     text: "Clean and thoughtful interfaces that make digital products easier to use.",
-    image: "/images/ui-ux.jpg",
+    image: "/images/ui-ux.png",
   },
   {
     title: "AI Solutions",
     text: "Smart AI-powered experiences for modern digital products.",
-    image: "/images/ai-solutions.jpg",
+    image: "/images/ai-solutions.png",
   },
   {
     title: "E-Commerce",
     text: "Professional online stores designed to turn visitors into customers.",
-    image: "/images/ecommerce.jpg",
+    image: "/images/ecommerce.png",
   },
   {
     title: "Custom Projects",
     text: "Have a unique idea? We turn your concept into a working product.",
-    image: "/images/custom-project.jpg",
+    image: "/images/custom-project.png",
   },
 ];
 

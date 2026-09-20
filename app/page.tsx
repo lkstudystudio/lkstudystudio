@@ -1,3 +1,4 @@
+import Projects from "@/components/Projects";
 import Services from "@/components/Services";
 
 export default function Home() {
@@ -65,6 +66,7 @@ export default function Home() {
 
       {/* Services */}
       <Services />
+      <Projects />
 
     </main>
   );

@@ -1,82 +1,82 @@
-const services = [
+const projects = [
   {
-    title: "Web Development",
-    text: "Fast, responsive and modern websites built for real-world businesses.",
-    image: "/images/web-development.png",
+    title: "Digital Business Website",
+    category: "Web Development",
+    image: "/images/project-business.png",
   },
   {
-    title: "App Development",
-    text: "Powerful digital applications designed around your ideas.",
-    image: "/images/app-development.png",
+    title: "Modern E-Commerce",
+    category: "E-Commerce",
+    image: "/images/project-ecommerce.png",
   },
   {
-    title: "UI / UX Design",
-    text: "Clean and thoughtful interfaces that make digital products easier to use.",
-    image: "/images/ui-ux.png",
-  },
-  {
-    title: "AI Solutions",
-    text: "Smart AI-powered experiences for modern digital products.",
-    image: "/images/ai-solutions.png",
-  },
-  {
-    title: "E-Commerce",
-    text: "Professional online stores designed to turn visitors into customers.",
-    image: "/images/ecommerce.png",
-  },
-  {
-    title: "Custom Projects",
-    text: "Have a unique idea? We turn your concept into a working product.",
-    image: "/images/custom-project.png",
+    title: "Creative Portfolio",
+    category: "UI / UX Design",
+    image: "/images/project-portfolio.png",
   },
 ];
 
-export default function Services() {
+export default function Projects() {
   return (
     <section
-      id="services"
+      id="work"
       className="bg-[#050505] px-6 py-24 text-white lg:px-12"
     >
-      <div className="mb-14 max-w-2xl">
-        <p className="mb-4 text-sm uppercase tracking-[0.3em] text-white/40">
-          What We Do
-        </p>
+      <div className="mb-14 flex flex-col justify-between gap-6 md:flex-row md:items-end">
+        <div>
+          <p className="mb-4 text-sm uppercase tracking-[0.3em] text-white/40">
+            Selected Work
+          </p>
 
-        <h2 className="text-4xl font-semibold tracking-tight sm:text-6xl">
-          Digital solutions
-          <br />
-          for ambitious ideas.
-        </h2>
+          <h2 className="text-4xl font-semibold tracking-tight sm:text-6xl">
+            Ideas we've
+            <br />
+            brought to life.
+          </h2>
+        </div>
+
+        <p className="max-w-sm text-sm leading-6 text-white/40">
+          A selection of digital experiences designed and developed
+          with a focus on performance, usability and visual quality.
+        </p>
       </div>
 
-      <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-        {services.map((service) => (
+      <div className="grid gap-6 md:grid-cols-2">
+        {projects.map((project, index) => (
           <article
-            key={service.title}
-            className="group overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] transition duration-500 hover:-translate-y-2 hover:border-white/20"
+            key={project.title}
+            className={`group overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] ${
+              index === 0 ? "md:col-span-2" : ""
+            }`}
           >
-            <div className="aspect-[4/3] overflow-hidden bg-white/5">
+            <div
+              className={`overflow-hidden ${
+                index === 0 ? "aspect-[16/7]" : "aspect-[4/3]"
+              }`}
+            >
               <img
-                src={service.image}
-                alt={service.title}
+                src={project.image}
+                alt={project.title}
                 className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
               />
             </div>
 
-            <div className="p-7">
-              <h3 className="text-2xl font-medium">
-                {service.title}
-              </h3>
+            <div className="flex items-end justify-between gap-4 p-6">
+              <div>
+                <p className="mb-2 text-xs uppercase tracking-[0.2em] text-white/35">
+                  {project.category}
+                </p>
 
-              <p className="mt-3 text-sm leading-6 text-white/45">
-                {service.text}
-              </p>
+                <h3 className="text-xl font-medium">
+                  {project.title}
+                </h3>
+              </div>
 
               <a
                 href="#contact"
-                className="mt-6 inline-block text-sm text-white underline underline-offset-4"
+                className="shrink-0 text-sm underline underline-offset-4"
               >
-                Discuss Project
+                View Project
               </a>
             </div>
           </article>

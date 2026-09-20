@@ -1,6 +1,10 @@
+import Services from "@/components/Services";
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#050505] text-white">
+
+      {/* Navbar */}
       <nav className="flex items-center justify-between px-6 py-5 lg:px-12">
         <h1 className="text-lg font-semibold tracking-tight">
           LK STUDY STUDIO
@@ -21,6 +25,7 @@ export default function Home() {
         </a>
       </nav>
 
+      {/* Hero */}
       <section className="relative flex min-h-[calc(100vh-80px)] items-center overflow-hidden px-6 py-20 lg:px-12">
         <div className="absolute inset-0 -z-0 bg-[radial-gradient(circle_at_70%_40%,rgba(90,60,255,.18),transparent_35%)]" />
 
@@ -57,6 +62,10 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Services */}
+      <Services />
+
     </main>
   );
 }
